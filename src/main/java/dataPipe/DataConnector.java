@@ -12,11 +12,11 @@ public class DataConnector {
         super();
     }
 
-    public InputStream getInputStream() {
+    InputStream getInputStream() {
         return inputStream;
     }
 
-    public OutputStream getOutputStream() {
+    OutputStream getOutputStream() {
         return outputStream;
     }
 

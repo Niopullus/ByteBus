@@ -1,4 +1,4 @@
-package dataPackage.extractor;
+package extraction;
 
 public class ExtractorException extends RuntimeException {
 

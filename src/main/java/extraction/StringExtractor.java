@@ -1,6 +1,7 @@
-package dataPackage.extractor;
+package extraction;
 
-import dataPackage.DataPackage;
+import dataPipe.DataPackage;
+import extraction.DataExtractor;
 
 public class StringExtractor extends DataExtractor {
 
@@ -9,7 +10,8 @@ public class StringExtractor extends DataExtractor {
     }
 
     public String extractString() {
-
+        //TODO Finish method
+        return null;
     }
 
 }

@@ -1,6 +1,7 @@
-package dataPackage.extractor;
+package extraction;
 
-import dataPackage.DataPackage;
+import dataPipe.DataPackage;
+import extraction.DataExtractor;
 
 import java.awt.image.BufferedImage;
 
@@ -11,7 +12,8 @@ public class BufferedImageExtractor extends DataExtractor {
     }
 
     public BufferedImage extractImage() {
-
+        //TODO Finish method
+        return null;
     }
 
 }
