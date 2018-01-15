@@ -1,18 +1,18 @@
 package com.gmail.niopullus.lib.bytebus.extraction;
 
-import com.gmail.niopullus.lib.bytebus.dataPipe.DataPackage;
-
 public class DataExtractor {
 
-    private DataPackage dataPackage;
-
-    public DataExtractor(final DataPackage dataPackage) {
+    public DataExtractor() {
         super();
-        this.dataPackage = dataPackage;
     }
 
-    public DataPackage getDataPackage() {
-        return dataPackage;
+    public void throwExtractorException(final Exception exception, final String reason) {
+        final ExtractorException extractorException;
+        extractorException = new ExtractorException(reason);
+        if (exception != null) {
+            extractorException.initCause(exception);
+        }
+        throw extractorException;
     }
 
 }

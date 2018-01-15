@@ -7,16 +7,18 @@ class DataSender {
 
     private DataPipeContext context;
     private OutputStream outputStream;
+    private DataPackageTranscriber dataPackageTranscriber;
 
     DataSender(final DataPipeContext context) {
         super();
         this.context = context;
+        dataPackageTranscriber = new DataPackageTranscriber();
     }
 
     void send(final DataPackage dataPackage) {
         final byte[] data;
         retrieveOutputStream();
-        data = dataPackage.getData();
+        data = dataPackageTranscriber.transcribe(dataPackage);
         for (byte byteData : data) {
             writeData(byteData);
         }

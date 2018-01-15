@@ -1,11 +1,10 @@
 package com.gmail.niopullus.lib.bytebus.dataPipe;
 
-import com.gmail.niopullus.lib.bytebus.packageBuilder.DataPackageBuilder;
+import com.gmail.niopullus.lib.bytebus.dataPackageBuilder.DataPackageBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayDeque;
-import java.util.Optional;
 import java.util.Queue;
 
 class DataReader implements Runnable {
@@ -43,8 +42,8 @@ class DataReader implements Runnable {
     }
 
     private void waitForDataPackage() throws InterruptedException {
-        synchronized (this) {
-            while (dataPackages.isEmpty() && !dataPipeStatus.isClosed()) {
+        while (dataPackages.isEmpty() && !dataPipeStatus.isClosed()) {
+            synchronized (this) {
                 wait();
             }
         }

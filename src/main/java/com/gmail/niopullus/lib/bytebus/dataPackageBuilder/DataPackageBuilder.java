@@ -1,4 +1,4 @@
-package com.gmail.niopullus.lib.bytebus.packageBuilder;
+package com.gmail.niopullus.lib.bytebus.dataPackageBuilder;
 
 import com.gmail.niopullus.lib.bytebus.dataPipe.DataPackage;
 

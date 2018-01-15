@@ -1,4 +1,4 @@
-package com.gmail.niopullus.lib.bytebus.packageBuilder;
+package com.gmail.niopullus.lib.bytebus.dataPackageBuilder;
 
 import java.util.List;
 

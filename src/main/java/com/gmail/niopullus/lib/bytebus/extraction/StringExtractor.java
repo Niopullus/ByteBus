@@ -5,12 +5,18 @@ import com.gmail.niopullus.lib.bytebus.extraction.DataExtractor;
 
 public class StringExtractor extends DataExtractor {
 
-    public StringExtractor(final DataPackage dataPackage) {
-        super(dataPackage);
+    public StringExtractor() {
+        super();
     }
 
-    public String extractString() {
-        //TODO Finish method
+    public String extractString(final DataPackage dataPackage) {
+        try {
+            final byte[] data;
+            data = dataPackage.getData();
+            return new String(data);
+        } catch (final Exception e) {
+            throwExtractorException(e, null);
+        }
         return null;
     }
 
